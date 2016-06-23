@@ -4,7 +4,7 @@ Generate version containing pre-release information (`v1.0.0-alpha.1`, `2.4.1.be
 
 ## How to use this Step
 
-Define which pre-release identifier and initial number do you want to use for your workflow (`alpha`, `beta`, `rc`) and which format do you prefer. The provided app version will be extended with this information.
+Define which pre-release identifier and initial number you want to use for your workflow (`alpha`, `beta`, `rc`) and which format you prefer. The provided app version will be extended with this information.
 
 ## Description
 
@@ -15,7 +15,7 @@ Pre-release information is exported to the following environment variables:
 - **APP_PRE_RELEASE_INFO** (e.g. `rc.3`)
 - **APP_VERSION_WITH_PRE_RELEASE_INFO** (e.g. `v2.0-rc.3`)
 
-You can use these environment variables in next steps (e.g. when creating a git tag).
+You can use these environment variables in the next steps (e.g. when creating a git tag).
 
 ## Outputs
 
