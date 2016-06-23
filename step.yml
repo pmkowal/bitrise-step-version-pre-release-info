@@ -48,7 +48,7 @@ inputs:
       description: |
         If there are no tags, pre-release number is set to this value
       is_required: true
-  - pre_release_version_prefix: v
+  - version_prefix: v
     opts:
       title: "Version prefix"
       description: |
