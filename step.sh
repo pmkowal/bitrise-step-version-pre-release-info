@@ -15,7 +15,7 @@ if [ -z "${pre_release_initial_value}" ] ; then
 fi
 
 pattern="${version_prefix}${version_number}${pre_release_identifier_prefix}${pre_release_identifier}${pre_release_number_prefix}*"
-found_tag="$(git tag -l "${pattern}" | tail -1)"
+found_tag="$(git tag -l "${pattern}" | sort -t"${pre_release_number_prefix}" -k 1,1n -k 2,2n -k 3,3n -k 4,4n | tail -1)"
 
 pre_release_info=""
 if [ -z "$found_tag" ]; then
