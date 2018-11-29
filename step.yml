@@ -14,20 +14,16 @@ source_code_url: https://github.com/pmkowal/bitrise-step-version-pre-release-inf
 support_url: https://github.com/pmkowal/bitrise-step-version-pre-release-info/issues
 host_os_tags:
   - osx-10.10
-project_type_tags:
-  - ios
 type_tags:
-  - xcode
-  - versioning
-  - pre-release
-  - git
-  - tag
-  - alpha
-  - beta
-  - rc
+  - deploy
+  - utility
+  - build
 is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
+deps:
+  brew:
+    - name: git
 run_if: ""
 inputs:
   - version_number: $XPI_VERSION
