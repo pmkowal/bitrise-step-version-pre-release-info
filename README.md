@@ -1,6 +1,6 @@
 # Version pre-release info
 
-Generate version containing pre-release information (`v1.0.0-alpha.1`, `2.4.1.beta+2`, `v2.0-rc.3`) based on git tags.
+Generate version containing pre-release information (`v1.0.0-alpha.1`, `2.4.1.249-beta+2`, `v2.0-rc.3`) based on git tags.
 
 ## How to use this Step
 

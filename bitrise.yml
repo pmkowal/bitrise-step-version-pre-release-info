@@ -25,6 +25,8 @@ workflows:
         run_if: true
         inputs:
         - version_number: 1.2.0
+        - build_prefix: "."
+        - build_number: 463
         - pre_release_identifier: beta
         - pre_release_initial_value: 1
         - pre_release_version_prefix: v
@@ -48,7 +50,7 @@ workflows:
       # if you want to share this step into a StepLib
       - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/pmkowal/bitrise-steplib.git
       - STEP_ID_IN_STEPLIB: version-pre-release-info
-      - STEP_GIT_VERION_TAG_TO_SHARE: 1.0.3
+      - STEP_GIT_VERION_TAG_TO_SHARE: 1.1.0
       - STEP_GIT_CLONE_URL: https://github.com/pmkowal/bitrise-step-version-pre-release-info.git
     description: |-
       If this is the first time you try to share a Step you should

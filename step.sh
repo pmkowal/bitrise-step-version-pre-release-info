@@ -16,7 +16,7 @@ fi
 
 git fetch --tags
 
-pattern="${version_prefix}${version_number}${pre_release_identifier_prefix}${pre_release_identifier}${pre_release_number_prefix}*"
+pattern="${version_prefix}${version_number}*${pre_release_identifier_prefix}${pre_release_identifier}${pre_release_number_prefix}*"
 found_tag="$(git tag -l "${pattern}" | sort -t"${pre_release_number_prefix}" -k 1,1n -k 2,2n -k 3,3n -k 4,4n | tail -1)"
 
 pre_release_info=""
@@ -29,9 +29,9 @@ else
 fi
 
 envman add --key APP_VERSION_PRE_RELEASE_INFO --value "${pre_release_info}"
-envman add --key APP_VERSION_WITH_PRE_RELEASE_INFO --value "${version_prefix}${version_number}${pre_release_identifier_prefix}${pre_release_info}"
+envman add --key APP_VERSION_WITH_PRE_RELEASE_INFO --value "${version_prefix}${version_number}${build_prefix}${build_number}${pre_release_identifier_prefix}${pre_release_info}"
 
 echo "Pre-release info: ${pre_release_info}"
-echo "Version with pre-release info: ${version_prefix}${version_number}${pre_release_identifier_prefix}${pre_release_info}"
+echo "Version with pre-release info: ${version_prefix}${version_number}${build_prefix}${build_number}${pre_release_identifier_prefix}${pre_release_info}"
 
 exit 0
